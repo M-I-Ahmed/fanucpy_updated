@@ -1,5 +1,8 @@
 # fanucpy: Python package for FANUC industrial robots
 
+## CHANGES
+Edited FanucPy to use an alternative to socket communcation, allowing communication with industrially spec'd Fanuc Robots
+
 # IMPORTANT
 The funding for this project officially ended on September 1, 2023. I am seeking external funding to keep this package alive and to develop packages such as abbpy, kukapy, etc. Please help me with your comments and use cases to understand better your needs. This is my calendar link for arranging a quick video call: https://calendar.app.google/GRfs1Q61QbQSMtAD8.
 
