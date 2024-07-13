@@ -297,6 +297,20 @@ class Robot:
         """
         cmd = f"setdout:{str(dout_num).zfill(5)}:{str(val).lower()}"
         return self.send_cmd(cmd, continue_on_error=continue_on_error)
+    
+    def get_din(self, din_num: int) -> int:
+        """Get DIN value.
+
+        Args:
+            din_num (int): DIN number.
+
+        Returns:
+            din_value: DIN value.
+        """
+        cmd = f"getdin:{str(din_num).zfill(5)}"
+        _, din_value_ = self.send_cmd(cmd)
+        din_value = int(din_value_)
+        return din_value
 
     def set_sys_var(
         self,
