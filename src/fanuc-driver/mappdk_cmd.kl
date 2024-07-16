@@ -571,17 +571,14 @@ ROUTINE GET_DIN(cmd: STRING): STRING
 VAR
     din_num:            INTEGER
 BEGIN
-    WRITE('Hello')
     CNV_STR_INT(SUB_STR(cmd, 8, 5), din_num)
 
     IF DIN[din_num] = TRUE THEN
-        DIN[din_num] = TRUE
         resp = '0:1'
         RETURN(resp)
     ENDIF
 
     IF DIN[din_num] = FALSE THEN
-        DIN[din_num] = FALSE
         resp = '0:0'
         RETURN(resp)
     ENDIF
