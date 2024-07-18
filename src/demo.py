@@ -3,7 +3,7 @@ from fanucpy import Robot
 
 robot = Robot(
     robot_model="Fanuc",
-    host="10.211.55.3",
+    host="127.0.0.1",
     port=18735,
     ee_DO_type="RDO",
     ee_DO_num=7,
@@ -21,7 +21,7 @@ print(f"Current joints: {cur_jpos}")
 # move in joint space
 robot.move(
     "joint",
-    vals=np.array(cur_jpos) + 0.5,
+    vals=np.array(cur_jpos) + 100,
     velocity=100,
     acceleration=100,
     cnt_val=0,
